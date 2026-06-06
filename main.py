@@ -15,9 +15,9 @@ app = FastAPI()
 
 # 注册书籍路由
 app.include_router(book_router, prefix=f"/api/v1/books")
-# @app.get("/")
-# async def read_root():
-#     return {"message": "hello World"}
+@app.get("/")
+async def read_root():
+    return {"message": "hello World"}
 # # 查询参数
 # @app.get('/greet')
 # async def greet(name: Optional[str] = 'user',age: Optional[int] = 18) -> dict:
