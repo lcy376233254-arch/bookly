@@ -48,7 +48,7 @@ def register_middleware(app: FastAPI):
     app.add_middleware(
         TrustedHostMiddleware,
         # 此处填写允许的主机名
-        allowed_hosts=["localhost", "127.0.0.1"]
+        allowed_hosts=["localhost", "127.0.0.1","bookly-y2mx.onrender.com/"]
     )
     
     # async def authrization(request: Request, call_next):
